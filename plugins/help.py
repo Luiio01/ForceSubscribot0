@@ -17,7 +17,7 @@ def _start(client, message):
             if user.status == "kicked":
                client.send_message(
                    chat_id=message.chat.id,
-                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/tgxbotz_chat).",
+                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/joinchat/da46sis5jOA5MjIx).",
                    parse_mode="markdown",
                    disable_web_page_preview=True
                )
@@ -43,7 +43,7 @@ def _start(client, message):
                     [
                         [
                            InlineKeyboardButton("Join Updates Channel", url="https://t.me/tgxbotz_update"),
-                           InlineKeyboardButton("Support Group", url="https://t.me/tgxbotz_chat")
+                           InlineKeyboardButton("Support Group", url="https://t.me/joinchat/da46sis5jOA5MjIx")
                       ],
 
                   ]
@@ -58,7 +58,7 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton("Join Updates Channel", url="https://t.me/tgxbotz_update"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/tgxbotz_chat")
+                    InlineKeyboardButton("Support Group", url="https://t.me/joinchat/da46sis5jOA5MjIx")
                 ],
             ]
         ),
@@ -78,7 +78,7 @@ def _source_code(client, message):
                 ],
                 [
                     InlineKeyboardButton("Join Updates Channel", url="https://t.me/tgxbotz_update"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/tgxbotz_chat")
+                    InlineKeyboardButton("Support Group", url="https://t.me/joinchat/da46sis5jOA5MjIx")
                 ],
                 [
                     InlineKeyboardButton("Creator", url="https://t.me/shrvan42")
@@ -98,7 +98,7 @@ def _help(client, message):
             if user.status == "kicked":
                client.send_message(
                    chat_id=message.chat.id,
-                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/tgxbotz_chat).",
+                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/joinchat/da46sis5jOA5MjIx).",
                    parse_mode="markdown",
                    disable_web_page_preview=True
                )
@@ -120,7 +120,7 @@ def _help(client, message):
         except Exception:
             client.send_message(
                 chat_id=message.chat.id,
-                text="Hey use this command in my pm. \nFor more help ask in my [Support Group](https://t.me/tgxbotz_chat).",
+                text="Hey use this command in my pm. \nFor more help ask in my [Support Group](https://t.me/joinchat/da46sis5jOA5MjIx).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
