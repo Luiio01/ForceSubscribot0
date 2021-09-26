@@ -48,7 +48,7 @@ def _check_member(client, message):
       if channel.startswith("-"):
           channel_url = client.export_chat_invite_link(int(channel))
       else:
-          channel_url = f"https://t.me/{miofirstt}"
+          channel_url = f"https://t.me/{channel}"
       try:
         client.get_chat_member(channel, user_id)
       except UserNotParticipant:
@@ -118,7 +118,7 @@ def config(client, message):
         if my_channel.startswith("-"):
             channel_url = client.export_chat_invite_link(int(input_str))
         else:
-            channel_url = f"https://t.me/{miofirstt}"
+            channel_url = f"https://t.me/{chanel}"
         message.reply_text(f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel]({channel_url})__", disable_web_page_preview=True)
       else:
         message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
