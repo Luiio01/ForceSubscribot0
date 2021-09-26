@@ -46,7 +46,7 @@ def _check_member(client, message):
     if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in Config.SUDO_USERS:
       channel = chat_db.channel
       if channel.startswith("-"):
-          channel_url = client.export_chat_invite_link(int(miofirstt))
+          channel_url = client.export_chat_invite_link(int(channel))
       else:
           channel_url = f"https://t.me/{miofirstt}"
       try:
