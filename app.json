@@ -29,7 +29,7 @@
             "required": true
         },
         "UPDATES_CHANNEL": {
-            "description": "Your bot updates channel username without @ or leave empty",
+            "description": "miofirstt",
             "value": "",
             "required": false
         },
