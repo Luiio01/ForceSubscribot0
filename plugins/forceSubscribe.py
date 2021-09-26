@@ -48,7 +48,7 @@ def _check_member(client, message):
       if channel.startswith("-"):
           channel_url = client.export_chat_invite_link(int(channel))
       else:
-          channel_url = f"https://t.me/miofirstt"
+          channel_url = f"https://t.me/{miofirstt}"
       try:
         client.get_chat_member(channel, user_id)
       except UserNotParticipant:
