@@ -46,9 +46,9 @@ def _check_member(client, message):
     if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in Config.SUDO_USERS:
       channel = chat_db.channel
       if channel.startswith("-"):
-          channel_url = client.export_chat_invite_link(int(channel))
+          channel_url = client.export_chat_invite_link(int(miofirstt))
       else:
-          channel_url = f"https://t.me/{channel}"
+          channel_url = f"https://t.me/{miofirstt}"
       try:
         client.get_chat_member(channel, user_id)
       except UserNotParticipant:
@@ -72,7 +72,7 @@ def _check_member(client, message):
           sent_message.edit("❗ **I am not an admin here.**\n__Make me admin with ban user permission and add me again.\n#Leaving this chat...__")
           client.leave_chat(chat_id)
       except ChatAdminRequired:
-        client.send_message(chat_id, text=f"❗ **I am not an admin in [channel]({channel_url})**\n__Make me admin in the channel and add me again.\n#Leaving this chat...__")
+        client.send_message(chat_id, text=f"❗ **I am not an admin in [miofirstt]({channel_url})**\n__Make me admin in the channel and add me again.\n#Leaving this chat...__")
         client.leave_chat(chat_id)
 
 
@@ -105,9 +105,9 @@ def config(client, message):
               channel_url = client.export_chat_invite_link(int(input_str))
           else:
               channel_url = f"https://t.me/{input_str}"
-          message.reply_text(f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel]({channel_url}) in order to send messages in this group.__", disable_web_page_preview=True)
+          message.reply_text(f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [miofirstt]({channel_url}) in order to send messages in this group.__", disable_web_page_preview=True)
         except UserNotParticipant:
-          message.reply_text(f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [channel]({channel_url}). Add me as a admin in order to enable ForceSubscribe.__", disable_web_page_preview=True)
+          message.reply_text(f"❗ **Not an Admin in the Channel**\n__I am not an admin in the [miofirstt]({channel_url}). Add me as a admin in order to enable ForceSubscribe.__", disable_web_page_preview=True)
         except (UsernameNotOccupied, PeerIdInvalid):
           message.reply_text(f"❗ **Invalid Channel Username/ID.**")
         except Exception as err:
@@ -119,7 +119,7 @@ def config(client, message):
             channel_url = client.export_chat_invite_link(int(input_str))
         else:
             channel_url = f"https://t.me/{chanel}"
-        message.reply_text(f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel]({channel_url})__", disable_web_page_preview=True)
+        message.reply_text(f"✅ **Force Subscribe is enabled in this chat.**\n__For this [miofirstt]({channel_url})__", disable_web_page_preview=True)
       else:
         message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
   else:
